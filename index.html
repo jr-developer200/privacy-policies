@@ -76,15 +76,19 @@
       <li><strong>Storage</strong>: <code>READ_EXTERNAL_STORAGE</code>, <code>WRITE_EXTERNAL_STORAGE</code> — used to read/write files; newer Android uses scoped storage where possible.</li>
       <li><strong>Nearby / Bluetooth</strong>: <code>BLUETOOTH_ADVERTISE</code>, <code>BLUETOOTH_CONNECT</code>, <code>BLUETOOTH_SCAN</code> — used to discover/connect to nearby devices.</li>
       <li><strong>Notifications</strong>: <code>POST_NOTIFICATIONS</code> — used to show app notifications.</li>
+      <li><strong>Draw over apps</strong>: <code>SYSTEM_ALERT_WINDOW</code> / display over other apps — used to show overlays or floating UI when required by the app.</li>
+      <li><strong>Installed apps list</strong>: permission to access the list of installed apps (<code>QUERY_ALL_PACKAGES</code> or package visibility APIs) — used only when necessary to provide features like app integration or compatibility checks.</li>
+      <li><strong>Clipboard</strong>: access to the clipboard (<code>READ_CLIPBOARD</code> on older APIs or direct clipboard reads) — used only for explicit clipboard-based imports or paste features</li>
+      <li><strong>Exact alarms</strong>: <code>SCHEDULE_EXACT_ALARM</code> — used to schedule precise alarms or reminders when exact timing is required by app features (we request this only when necessary).</li>
     </ul>
 
     <h3>Quick notes</h3>
     <ul>
       <li>We request only permissions necessary for each app.</li>
-      <li>Optional permissions may include an explanation before prompting; you may decline them.</li>
+      <li>Optional permissions include an explanation before prompting; you may decline them.</li>
       <li>You can revoke permissions anytime via device Settings — some features may stop working.</li>
       <li>Some permissions may be requested by third‑party SDKs (ads, analytics); see the “Third parties &amp; SDKs” section for details.</li>
-      <li>For exact, app-specific permission and data practices, check the Data safety section on the app’s Google Play Store listing</li>
+      <li>For exact, app-specific permission and data practices, check the Data safety section on the app’s Google Play Store listing and the in‑app About/Permissions screen.</li>
     </ul>
   </div>
 
